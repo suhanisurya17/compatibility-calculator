@@ -12,12 +12,14 @@ Follow these steps to set up and run the project.
 ## Steps to Set Up the Project
 
 ### 1. Project Structure
+```sh
 │── main.py
 │── templates
 │   └── index.html
 │── static
 │   └── attributes
 │       └── style.css
+```
 
 ### 2. Create a Python Virtual Environment
 Open the terminal and run:
