@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+
+<h1>Welcome to the Compatibility Calculator</h1>
+
+<!-- Form to submit names -->
+<form method="POST" action="/">
+    <div class="form-container">
+        <!-- Labels Row -->
+        <div class="label-row">
+            <label for="name1">Enter your name:</label>
+            <label for="name2">Enter your partner's name:</label>
+        </div>
+
+        <!-- Inputs Row -->
+        <div class="input-row">
+            <input type="text" name="name1" id="name1" value="{{ name1 if name1 else '' }}">
+            <input type="text" name="name2" id="name2" value="{{ name2 if name2 else '' }}">
+        </div>
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<!-- Display Love Score if Available -->
+{% if score is not none %}
+    <h2>Your love score is: {{ score }}%</h2>
+{% elif error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+
+</body>
+</html>

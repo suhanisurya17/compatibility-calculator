@@ -1,0 +1,88 @@
+html {
+    background-image: url("attributes/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #ffebef; /* Soft pink background in case image doesn’t load */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: "Courier New", cursive, sans-serif; /* A more romantic font */
+    color: #d63384; /* Valentine’s pink */
+}
+
+h1 {
+    font-size: 2rem;
+    color: #000000; /* A vibrant red-pink */
+    text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.5); /* Soft glow */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background: rgba(255, 182, 193, 0.8); /* Light pink with transparency */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff3366;
+    max-width: 300px;
+}
+
+.label-row {
+    display: flex;
+    gap: 10px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.input-row input {
+    width: 120px;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid #ff3366;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #fff0f5; /* Soft pink */
+}
+
+#submit-button {
+    margin-top: 15px;
+    background-color: #ff3366;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: #ff6699;
+    transform: scale(1.1);
+}
+
+/* Cute heart animation */
+@keyframes floating-hearts {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+h1::after {
+    content: " 💖";
+    display: inline-block;
+    animation: floating-hearts 1.5s infinite;
+}
