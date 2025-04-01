@@ -8,6 +8,7 @@ Follow these steps to set up and run the project.
 
 - Python installed
 - Node.js installed
+- Flask installed
 
 ## Steps to Set Up the Project
 
